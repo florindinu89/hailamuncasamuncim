@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,16 +20,33 @@
       left: 0;
       display: flex;
       align-items: center;
-      padding-left: 1rem;
+      justify-content: space-between;
+      padding: 0 1rem;
+      z-index: 10;
     }
-    header img {
-      height: 80%;
-      max-height: 90%;
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 100%;
+      max-height: 100%;
+      width: auto;
+      max-width: none;
+      object-fit: contain;
+      display: block;
+    }
+    .language-selector {
+      margin-right: 1rem;
+    }
+    .language-selector select {
+      padding: 0.3rem;
+      font-weight: bold;
     }
     nav {
       width: 15%;
       margin-top: 10vh;
-      background-color: #ffffff;
+      background-color: #81c784;
       padding: 1rem;
       height: 90vh;
       box-sizing: border-box;
@@ -50,6 +67,7 @@
       text-decoration: none;
       color: #2e7d32;
       font-weight: bold;
+      background-color: #ffffff;
     }
     nav ul li a:hover {
       background-color: #f0f0f0;
@@ -70,36 +88,44 @@
 <body>
 
   <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/1995/1995526.png" alt="fermier">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995526.png" alt="farmer">
+      </a>
+    </div>
+    <div class="language-selector">
+      <select onchange="location = this.value;">
+        <option value="index.html">🇬🇧 EN</option>
+        <option value="index.html">🇷🇴 RO</option>
+      </select>
+    </div>
   </header>
 
   <nav>
     <ul>
-      <li><a href="legume.html">Depozitare legume</a></li>
-      <li><a href="fructe.html">Depozitare fructe</a></li>
-      <li><a href="birouri.html">Închiriere spații birouri</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="legume_en.html">Vegetable Storage</a></li>
+      <li><a href="fructe_en.html">Fruit Storage</a></li>
+      <li><a href="birouri_en.html">Office Space Rental</a></li>
+      <li><a href="contact_en.html">Contact</a></li>
     </ul>
   </nav>
 
   <main>
     <div class="content">
-      <h2>Despre noi – Depozitul de Legume și Fructe Verguleasa, Buzău</h2>
+      <h2>About Us – Vegetable and Fruit Warehouse Verguleasa, Buzău</h2>
       <p>
-        La depozitul nostru din Verguleasa, județul Buzău, pasiunea pentru produse proaspete este la baza fiecărei livrări.
-        Suntem o echipă dedicată care colaborează cu producători locali și regionali pentru a aduce în fiecare zi legume și
-        fructe curate, gustoase și de sezon, direct de la sursă.
+        At our warehouse in Verguleasa, Buzău County, the passion for fresh produce is at the core of every delivery.
+        We are a dedicated team working with local and regional producers to bring fresh, tasty, seasonal vegetables and fruits directly from the source every day.
       </p>
       <p>
-        Cu o infrastructură modernă de depozitare și logistică, asigurăm condiții optime pentru păstrarea prospețimii produselor,
-        fie că este vorba de roșii din grădină, cartofi de Buzău sau mere zemoase din livezile din zonă.
+        With modern storage and logistics infrastructure, we ensure optimal conditions for preserving the freshness of products,
+        whether it's garden tomatoes, Buzău potatoes, or juicy apples from nearby orchards.
       </p>
       <p>
-        Ne adresăm atât micilor afaceri, cât și distribuitorilor mari, oferind parteneriate flexibile și aprovizionare constantă,
-        adaptată nevoilor fiecărui client.
+        We serve both small businesses and large distributors, offering flexible partnerships and consistent supply tailored to each client's needs.
       </p>
       <p>
-        🤝 Misiunea noastră: să fim puntea de încredere între fermierii locali și consumatorii care apreciază gustul autentic românesc.
+        🤝 Our mission: to be the trusted bridge between local farmers and consumers who appreciate the authentic Romanian taste.
       </p>
     </div>
   </main>
