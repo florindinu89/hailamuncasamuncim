@@ -99,8 +99,8 @@
   <header>
     <div class="language-selector">
       <select onchange="changeLanguage(this);">
-        <option value="en">🇬🇧 EN</option>
-        <option value="ro" selected>🇷🇴 RO</option>
+  <option value="ro" ${location.pathname.includes('_en') ? '' : 'selected'}>🇷🇴 RO</option>
+  <option value="en" ${location.pathname.includes('_en') ? 'selected' : ''}>🇬🇧 EN</option>
       </select>
     </div>
   </header>
