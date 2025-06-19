@@ -72,14 +72,34 @@
       text-align: center;
     }
   </style>
+<script>
+  function changeLanguage(select) {
+    const page = location.pathname.split("/").pop();
+    const isEnglish = page.includes("_en");
+    let newPage = "";
+
+    if (select.value === "ro") {
+      newPage = page.replace("_en", "") || "index.html";
+    } else {
+      if (page === "index.html" || page === "") {
+        newPage = "index_en.html";
+      } else {
+        const parts = page.split(".");
+        newPage = parts[0] + "_en.html";
+      }
+    }
+
+    location.href = newPage;
+  }
+</script>
 </head>
 <body>
 
   <header>
     <div class="language-selector">
-      <select onchange="location = this.value;">
-        <option value="index_en.html">🇬🇧 EN</option>
-        <option value="index.html" selected>🇷🇴 RO</option>
+      <select onchange="changeLanguage(this);">
+        <option value="en">🇬🇧 EN</option>
+        <option value="ro" selected>🇷🇴 RO</option>
       </select>
     </div>
   </header>
@@ -94,24 +114,9 @@
   </nav>
 
   <main>
-    <div class="content">
-      <h2>Despre noi – Depozitul de Legume și Fructe Verguleasa, Buzău</h2>
-      <p>
-        La depozitul nostru din Verguleasa, județul Buzău, pasiunea pentru produse proaspete este la baza fiecărei livrări. 
-        Suntem o echipă dedicată care colaborează cu producători locali și regionali pentru a aduce în fiecare zi legume și fructe curate, gustoase și de sezon, direct de la sursă.
-      </p>
-      <p>
-        Cu o infrastructură modernă de depozitare și logistică, asigurăm condiții optime pentru păstrarea prospețimii produselor, 
-        fie că este vorba de roșii din grădină, cartofi de Buzău sau mere zemoase din livezile din zonă.
-      </p>
-      <p>
-        Ne adresăm atât micilor afaceri, cât și distribuitorilor mari, oferind parteneriate flexibile și aprovizionare constantă, adaptată nevoilor fiecărui client.
-      </p>
-      <p>
-        🤝 Misiunea noastră: să fim puntea de încredere între fermierii locali și consumatorii care apreciază gustul autentic românesc.
-      </p>
-    </div>
-  </main>
+  <div class="content">
+  </div>
+</main>
 
 </body>
 </html>
