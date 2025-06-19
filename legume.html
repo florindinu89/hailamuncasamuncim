@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HailaMuncaSaMuncim</title>
   <style>
-    body {
+    body {{
       margin: 0;
       font-family: Arial, sans-serif;
       display: flex;
       background-color: #ffffff;
-    }
-    header {
+    }}
+    header {{
       width: 100%;
       height: 10vh;
       background-color: #81c784;
@@ -23,30 +23,30 @@
       justify-content: flex-end;
       padding: 0 1rem;
       z-index: 10;
-    }
-    .language-selector {
+    }}
+    .language-selector {{
       margin-right: 1rem;
-    }
-    .language-selector select {
+    }}
+    .language-selector select {{
       padding: 0.3rem;
       font-weight: bold;
-    }
-    nav {
+    }}
+    nav {{
       width: 15%;
       margin-top: 10vh;
       background-color: #81c784;
       padding: 1rem;
       height: 90vh;
       box-sizing: border-box;
-    }
-    nav ul {
+    }}
+    nav ul {{
       list-style: none;
       padding: 0;
-    }
-    nav ul li {
+    }}
+    nav ul li {{
       margin-bottom: 1rem;
-    }
-    nav ul li a {
+    }}
+    nav ul li a {{
       display: block;
       text-align: center;
       padding: 0.5rem;
@@ -56,21 +56,20 @@
       color: #2e7d32;
       font-weight: bold;
       background-color: #ffffff;
-    }
-    nav ul li a:hover {
+    }}
+    nav ul li a:hover {{
       background-color: #f0f0f0;
-    }
-    main {
+    }}
+    main {{
       margin-top: 10vh;
       padding: 2rem;
       width: 85%;
       background-color: #ffffff;
-    }
-    .content {
+    }}
+    .content {{
       max-width: 800px;
       margin: 0 auto;
-      text-align: center;
-    }
+    }}
   </style>
 </head>
 <body>
@@ -78,38 +77,24 @@
   <header>
     <div class="language-selector">
       <select onchange="location = this.value;">
-        <option value="legume.html">🇬🇧 EN</option>
-        <option value="index.html">🇷🇴 RO</option>
+        <option value="index_en.html">🇬🇧 EN</option>
+        <option value="index.html" selected>🇷🇴 RO</option>
       </select>
     </div>
   </header>
 
   <nav>
     <ul>
-      <li><a href="legume_en.html">Vegetable Storage</a></li>
-      <li><a href="fructe_en.html">Fruit Storage</a></li>
-      <li><a href="birouri_en.html">Office Space Rental</a></li>
-      <li><a href="contact_en.html">Contact</a></li>
+      <li><a href="legume.html">Depozitare Legume</a></li>
+      <li><a href="fructe.html">Depozitare Fructe</a></li>
+      <li><a href="birouri.html">Închiriere Spații Birouri</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <main>
     <div class="content">
-      <h2>About Us – Vegetable and Fruit Warehouse Verguleasa, Buzău</h2>
-      <p>
-        At our warehouse in Verguleasa, Buzău County, the passion for fresh produce is at the core of every delivery.
-        We are a dedicated team working with local and regional producers to bring fresh, tasty, seasonal vegetables and fruits directly from the source every day.
-      </p>
-      <p>
-        With modern storage and logistics infrastructure, we ensure optimal conditions for preserving the freshness of products,
-        whether it's garden tomatoes, Buzău potatoes, or juicy apples from nearby orchards.
-      </p>
-      <p>
-        We serve both small businesses and large distributors, offering flexible partnerships and consistent supply tailored to each client's needs.
-      </p>
-      <p>
-        🤝 Our mission: to be the trusted bridge between local farmers and consumers who appreciate the authentic Romanian taste.
-      </p>
+<h2>Depozitare Legume</h2><p>Oferim spații moderne pentru depozitarea legumelor în condiții optime de temperatură și umiditate.</p>
     </div>
   </main>
 
