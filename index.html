@@ -1,15 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HailaMuncaSaMuncim</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      display: flex;
       background-color: #ffffff;
     }
     header {
@@ -21,107 +22,38 @@
       left: 0;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      padding: 10px;
+      justify-content: space-between;
+      padding: 0 1rem;
       z-index: 10;
     }
-    .logo img {
-      height: 50px;  /* Ajustează înălțimea logo-ului */
+    header img {
+      height: 80%;
+      max-height: 80px;
       width: auto;
+      object-fit: contain;
     }
-    
     nav {
-      width: 15%;
       margin-top: 10vh;
-      background-color: #81c784;
       padding: 1rem;
-      height: 90vh;
-      box-sizing: border-box;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-    nav ul li {
-      margin-bottom: 1rem;
-    }
-    nav ul li a {
-      display: block;
-      text-align: center;
-      padding: 0.5rem;
-      border: 2px solid #000;
-      border-radius: 4px;
-      text-decoration: none;
-      color: #2e7d32;
-      font-weight: bold;
-      background-color: #ffffff;
-    }
-    nav ul li a:hover {
-      background-color: #f0f0f0;
+      background-color: #c8e6c9;
     }
     main {
-      margin-top: 10vh;
       padding: 2rem;
-      width: 85%;
-      background-color: #ffffff;
-    }
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
     }
   </style>
-<script>
-  function changeLanguage(select) {
-    const page = location.pathname.split("/").pop();
-    const isEnglish = page.includes("_en");
-    let newPage = "";
-
-    if (select.value === "ro") {
-      newPage = page.replace("_en", "") || "index.html";
-    } else {
-      if (page === "index.html" || page === "") {
-        newPage = "index.html";
-      } else {
-        const parts = page.split(".");
-        newPage = parts[0] + "_en.html";
-      }
-    }
-
-    location.href = newPage;
-  }
-</script>
 </head>
 <body>
-
   <header>
     <a href="index.html" style="display: flex; align-items: center;">
-      <img src="logo.png" alt="Logo" style="height: 80%; max-height: 100%; object-fit: contain;">
-  </a>
-  </div>
-</header>
-
+      <img src="logo.png" alt="Logo">
+    </a>
   </header>
-  
-
   <nav>
-    <ul id="menuList"> 
-      <li><a href="index.html">🏠 Acasă</a></li>
-      <li><a href="legume.html">Depozitare Legume</a></li>
-      <li><a href="fructe.html">Depozitare Fructe</a></li>
-      <li><a href="birouri.html">Închiriere Spații Birouri</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- Navigation here -->
   </nav>
-
   <main>
-  <div class="content">
-     <h1 style="text-align:center; font-size: 1.5em;">Bine ați venit!</h1>
-      <p style="text-align:center; font-size: 1.2em;">
-  <strong>“Un om de succes este unul care face mai mulți bani decât poate cheltui soția sa. O <strong>femeie de succes<strong> este o femeie care poate găsi un astfel de <strong>bărbat”<strong>
-    </p>
-  </div>
-</main>
-
+    <h1>Pagina principală</h1>
+    <p>Bine ați venit pe site!</p>
+  </main>
 </body>
 </html>
