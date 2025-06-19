@@ -72,14 +72,34 @@
       text-align: center;
     }
   </style>
+<script>
+  function changeLanguage(select) {
+    const page = location.pathname.split("/").pop();
+    const isEnglish = page.includes("_en");
+    let newPage = "";
+
+    if (select.value === "ro") {
+      newPage = page.replace("_en", "") || "index.html";
+    } else {
+      if (page === "index.html" || page === "") {
+        newPage = "index_en.html";
+      } else {
+        const parts = page.split(".");
+        newPage = parts[0] + "_en.html";
+      }
+    }
+
+    location.href = newPage;
+  }
+</script>
 </head>
 <body>
 
   <header>
     <div class="language-selector">
-      <select onchange="location = this.value;">
-        <option value="index_en.html">🇬🇧 EN</option>
-        <option value="index.html" selected>🇷🇴 RO</option>
+      <select onchange="changeLanguage(this);">
+        <option value="en">🇬🇧 EN</option>
+        <option value="ro" selected>🇷🇴 RO</option>
       </select>
     </div>
   </header>
